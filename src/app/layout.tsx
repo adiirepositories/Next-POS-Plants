@@ -21,6 +21,7 @@ import SupportIcon from "@mui/icons-material/Support";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import LayoutNav from "@/components/LayoutNav";
+import './globals.css'
 
 export const metadata = {
   title: "Next.js App Router + Material UI v5",

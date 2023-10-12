@@ -14,6 +14,9 @@ import { Backdrop } from "@mui/material";
 import axios from "axios";
 import CardHeader from "@mui/material/CardHeader";
 import styled from "@emotion/styled";
+import AddIcon from "@mui/icons-material/Add";
+import Button from "@mui/material/Button";
+import Link from "next/link";
 
 interface State {
   products: ProductList[];
@@ -64,7 +67,29 @@ export default function productsList() {
           // borderRadius: 2,
         }}
       >
-        <CardHeader title="Product List" />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            // p: 1,
+            // m: 1,
+            // bgcolor: 'background.paper',
+            // borderRadius: 1,
+          }}
+        >
+          <CardHeader title="Product List" />
+          <Link href="/add_products">
+            <Button
+              sx={{ m: 1, border: "none" }}
+              size="small"
+              component="label"
+              variant="outlined"
+              startIcon={<AddIcon />}
+            >
+              Add Product
+            </Button>
+          </Link>
+        </Box>
 
         <Table_list tablelist={producListtState} />
       </StyledCard>

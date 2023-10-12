@@ -56,11 +56,17 @@ export default function StarredPage(data: any) {
   
 
   useEffect(() => {
-
     getProducts();
 
-  }, []);
+    // const interval = setInterval(() => {
+    // getProducts();
+    // },5*1000);
+    // return () => clearInterval(interval);
 
+    // getProducts();
+
+  }, []);
+// console.log(productState)
 
 
   return (
