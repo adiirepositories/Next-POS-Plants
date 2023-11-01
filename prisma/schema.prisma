@@ -12,6 +12,7 @@ model Products {
   slug               String?
   productName              String?
   description        String
+  urlImage             String[]
   price              Int
   discountPercentage Int?
   rating             Int?
@@ -19,7 +20,6 @@ model Products {
   brand              String?
   category           String?
   thumbnail          String?
-  images             String?
   quantity           Int?
 }
 

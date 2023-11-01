@@ -8,7 +8,8 @@ const nextConfig = {
     },
   },
   images: {
-    domains: ["i.dummyjson.com"],
+    domains: ["i.dummyjson.com", 'res.cloudinary.com'],
+
     remotePatterns: [
       {
         protocol: 'https',
@@ -19,6 +20,5 @@ const nextConfig = {
     ],
   },
 };
-
 
 module.exports = nextConfig;

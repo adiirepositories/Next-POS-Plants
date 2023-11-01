@@ -8,15 +8,16 @@ import { Product } from "../../types";
 
 const prisma = new PrismaClient();
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest, response: NextResponse) {
   try {
     const body: Product = await request.json();
 
-    const { productName, description, price } = body;
+    const { productName, description, price, urlImage } = body;
     const products = await prisma.products.create({
       data: {
         productName,
         description,
+        urlImage,
         price,
       },
     });
@@ -32,7 +33,24 @@ export async function POST(request: NextRequest) {
 
 
 
-export async function GET(request: NextRequest) {
+export async function GET(request: NextRequest, response: NextResponse) {
+
+  // const { query: { key } } = request;
+
+  // if (key === 'secretkey') {
+  //   NextResponse.json({
+  //     message: "Please enter title"
+  //   }, {
+  //     status: 400,
+  //   })  } else {
+  //     NextResponse.json({
+  //       message: "Unauthorized. Invalid key provided."
+  //     }, {
+  //       status: 400,
+  //     })
+  // }
+
+  
   try {
 
     const res = await prisma.products.findMany();
@@ -45,3 +63,4 @@ export async function GET(request: NextRequest) {
     );
   }
 }
+

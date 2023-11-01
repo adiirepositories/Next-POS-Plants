@@ -107,7 +107,7 @@ const colorblueGrey = blueGrey[50];
   //   window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" , border: "none"}}>
       <CssBaseline />
       <AppBar
       color="secondary"
@@ -165,7 +165,7 @@ const colorblueGrey = blueGrey[50];
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ border: "none", width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
